@@ -1,0 +1,31 @@
+{% extends 'editbase.html' %}
+
+{% block body %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label><b><u>ADD MOVIE</u></b></label><br>
+
+<table>
+    <tr>
+    <td><label>NAME</label></td>
+   <td><input type="text" name="name" placeholder=""></td>
+    </tr>
+      <tr>
+    <td><label>DESCRIPTION</label></td>
+   <td><input type="text" name="des" placeholder=""></td>
+    </tr>
+      <tr>
+    <td><label>YEAR</label></td>
+   <td><input type="text" name="year" placeholder=" "></td>
+    </tr>
+         <tr>
+    <td><label>IMAGE</label></td>
+   <td><input type="file" name="img" ></td>
+    </tr>
+</table>
+    <button type="submit" onclick="alert('succesfully added)">submit</button>
+</form>
+<br>
+<!--<a href="{% url 'mapp:index' %}"><button>HOME</button></a>-->
+{% endblock %}

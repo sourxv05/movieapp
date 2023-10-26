@@ -1,0 +1,28 @@
+{% extends 'editbase.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+           <img src="{{mov1.img.url}}" height="600" width="500">
+        </div>
+
+    <div class="col-md-6">
+        <h1><u>{{mov1.name}}</u></h1><br>
+        <h2>{{mov1.des}}</h2><br>
+        <h4>{{mov1.year}}</h4>
+
+        <br>
+        <table>
+            <tr>
+                <td><a class="btn btn-warning" href="{% url 'mapp:edit' mov1.id %}">EDIT</a></td>
+               <td> <a  class="btn btn-danger" href="{% url 'mapp:delete' mov1.id %}">DELETE</a></td>
+            </tr>
+            </table>
+<!--        <br>-->
+<!--        <a class=""btn btn-info"" href="{% url 'mapp:index' %}">HOME</a>-->
+    </div>
+  </div>
+</div>
+
+{% endblock %}
